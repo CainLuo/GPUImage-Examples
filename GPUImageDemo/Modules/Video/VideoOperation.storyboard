@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0qf-o2-gWF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Operation View Controller-->
+        <scene sceneID="8Ry-Ky-cdr">
+            <objects>
+                <viewController storyboardIdentifier="VideoOperationViewController" id="0qf-o2-gWF" customClass="VideoOperationViewController" customModule="GPUImageDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VUF-UC-wDH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bRG-Pt-Sph">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsJ-M8-H4Y" customClass="RenderView" customModule="GPUImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="789"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jeC-tk-umj">
+                                        <rect key="frame" x="-2" y="789" width="418" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="AKx-iT-ray"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="0qf-o2-gWF" eventType="valueChanged" id="OAn-gT-BfF"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bRG-Pt-Sph" firstAttribute="leading" secondItem="THA-N2-Q08" secondAttribute="leading" id="MJC-y5-yzN"/>
+                            <constraint firstItem="THA-N2-Q08" firstAttribute="trailing" secondItem="bRG-Pt-Sph" secondAttribute="trailing" id="Y7L-go-uqG"/>
+                            <constraint firstItem="THA-N2-Q08" firstAttribute="bottom" secondItem="bRG-Pt-Sph" secondAttribute="bottom" id="nPL-vR-fVz"/>
+                            <constraint firstItem="bRG-Pt-Sph" firstAttribute="top" secondItem="THA-N2-Q08" secondAttribute="top" id="qLg-Ku-V1G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="THA-N2-Q08"/>
+                    </view>
+                    <connections>
+                        <outlet property="renderView" destination="fsJ-M8-H4Y" id="ubq-wc-tgj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcH-XW-Kkh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="161"/>
+        </scene>
+    </scenes>
+</document>

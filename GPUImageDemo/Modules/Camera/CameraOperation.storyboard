@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RIm-m8-CLW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera Operation Controller-->
+        <scene sceneID="iFL-7h-fYQ">
+            <objects>
+                <viewController storyboardIdentifier="CameraOperationController" id="RIm-m8-CLW" customClass="CameraOperationController" customModule="GPUImageDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BN3-kw-nwe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5j7-1Z-vOt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTS-R5-rTP" customClass="RenderView" customModule="GPUImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="788"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SHI-Si-SMZ">
+                                        <rect key="frame" x="-2" y="788" width="418" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="a1O-ia-B1m"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderAction:" destination="RIm-m8-CLW" eventType="valueChanged" id="f7z-7a-ETY"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5j7-1Z-vOt" firstAttribute="top" secondItem="SZM-OF-3yv" secondAttribute="top" id="06a-Sc-daE"/>
+                            <constraint firstItem="SZM-OF-3yv" firstAttribute="trailing" secondItem="5j7-1Z-vOt" secondAttribute="trailing" id="7c4-vv-qYB"/>
+                            <constraint firstItem="5j7-1Z-vOt" firstAttribute="leading" secondItem="SZM-OF-3yv" secondAttribute="leading" id="bOC-HV-4u8"/>
+                            <constraint firstItem="SZM-OF-3yv" firstAttribute="bottom" secondItem="5j7-1Z-vOt" secondAttribute="bottom" id="cah-ZV-2da"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SZM-OF-3yv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nmd-xG-rX4"/>
+                    <connections>
+                        <outlet property="cameraView" destination="uTS-R5-rTP" id="qvp-tu-dCD"/>
+                        <outlet property="slider" destination="SHI-Si-SMZ" id="Ugn-NJ-Mzc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuJ-tH-XN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="-194"/>
+        </scene>
+    </scenes>
+</document>
