@@ -10,5 +10,5 @@ target 'GPUImageDemo' do
 end
 
 target 'GPUImage_iOS' do
-  project 'GPUImage/GPUImage.xcodeproj'
+  project 'GPUImage3/framework/GPUImage.xcodeproj'
 end

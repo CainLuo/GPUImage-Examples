@@ -1,0 +1,3 @@
+[submodule "GPUImage3"]
+	path = GPUImage3
+	url = https://github.com/BradLarson/GPUImage3.git

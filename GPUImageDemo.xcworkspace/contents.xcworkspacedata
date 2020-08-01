@@ -8,6 +8,6 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:GPUImage/GPUImage.xcodeproj">
+      location = "group:GPUImage3/framework/GPUImage.xcodeproj">
    </FileRef>
 </Workspace>
